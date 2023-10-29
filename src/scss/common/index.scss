@@ -3,4 +3,17 @@
     height: 100vh;
     background-color: #f4f4f4;
   }
+
+  .middle-container {
+    height: 100vh;
+    overflow: auto;
+  }
+
+  .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 40px;
+  }
 }
