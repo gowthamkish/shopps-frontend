@@ -2,8 +2,11 @@ import "./scss/common/index.scss";
 import ProductList from "./components/productList/ProductList";
 import Header from "./components/common/Header";
 import { Grid } from "@mui/material";
+import { inject } from "@vercel/analytics";
 
 function App() {
+  inject();
+
   return (
     <div className="wrapper">
       <Header />
