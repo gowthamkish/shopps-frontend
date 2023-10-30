@@ -11,13 +11,11 @@ const ProductList = () => {
         <Grid container spacing={2}>
           {ProductListJSON &&
             ProductListJSON.length > 0 &&
-            ProductListJSON.map((item) => {
+            ProductListJSON.map((item, index) => {
               return (
-                <>
-                  <Grid item md={4} xs={12}>
-                    <ProductCard item={item} />
-                  </Grid>
-                </>
+                <Grid key={index} item md={4} xs={12}>
+                  <ProductCard item={item} />
+                </Grid>
               );
             })}
         </Grid>

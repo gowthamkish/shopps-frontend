@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import { Link } from "react-router-dom";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header() {
@@ -21,7 +22,7 @@ export default function Header() {
             {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            SHOPPS
+            <Link to={"/"}>SHOPPS</Link>
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>

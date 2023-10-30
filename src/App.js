@@ -1,29 +1,24 @@
 import "./scss/common/index.scss";
-import ProductList from "./components/productList/ProductList";
-import Header from "./components/common/Header";
-import { Grid } from "@mui/material";
 import { inject } from "@vercel/analytics";
-import useWindowDimensions from "./components/customHooks/useWindowDimensions";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/home/Home";
+import NotFound from "./components/common/NotFound";
+import Admin from "./components/admin/Admin";
+import Header from "./components/common/Header";
 
 function App() {
   inject();
-
-  const { height, width } = useWindowDimensions();
 
   return (
     <div className="wrapper">
       <Header />
 
-      <Grid container>
-        {width > 600 && (
-          <Grid className="left-panel" item md={2} xs={0}>
-            Filters
-          </Grid>
-        )}
-        <Grid className="middle-container" item md={10} xs={12}>
-          <ProductList />
-        </Grid>
-      </Grid>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/admin" exact element={<Admin />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
