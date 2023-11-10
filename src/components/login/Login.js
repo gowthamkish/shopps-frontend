@@ -29,6 +29,7 @@ const Login = () => {
                 variant="outlined"
                 value={email}
                 handleChange={setEmail}
+                autoComplete="off"
               />
             </Grid>
           </Grid>
@@ -40,7 +41,9 @@ const Login = () => {
                 label="Password"
                 variant="outlined"
                 value={password}
+                type="password"
                 handleChange={setPassword}
+                autoComplete="off"
               />
             </Grid>
           </Grid>

@@ -10,6 +10,7 @@ const CustomTextField = (props) => {
       <TextField
         fullWidth
         id="outlined-basic"
+        type={props.type}
         label={props.label}
         variant={props.variant}
         value={props.value}
